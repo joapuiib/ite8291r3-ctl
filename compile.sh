@@ -19,4 +19,5 @@ sudo chmod u+s dist/$BINARY_NAME
 
 BINARY_PATH=`which $BINARY_NAME`
 echo "Copying binary to $BINARY_PATH..."
-sudo cp dist/$BINARY_NAME $BINARY_PATH
+# Preserve attributes
+sudo cp -a dist/$BINARY_NAME $BINARY_PATH
